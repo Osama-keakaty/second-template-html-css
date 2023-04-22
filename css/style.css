@@ -1260,6 +1260,7 @@ ul {
     padding-bottom: 50px;
     justify-content: center;
     row-gap: 100px;
+    column-gap:50px;
     align-items: flex-start;
 }
 
