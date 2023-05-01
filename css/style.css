@@ -614,7 +614,7 @@ ul {
 }
 
 .portfolio ul li:hover {
-    padding: 9px 19px;
+    padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid var(--main-color);
 }
