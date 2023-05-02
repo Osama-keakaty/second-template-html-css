@@ -223,6 +223,7 @@ ul {
 .header .container nav a:active,
 .header .container nav a:hover {
     border-bottom: 1px solid var(--main-color);
+    color:var(--main-color);
 }
 
 @media (max-width:768px) {
@@ -257,6 +258,7 @@ ul {
     .header .container nav a:hover {
         border-bottom: 1px solid var(--main-color);
         padding-left: 30px;
+          color: white;
     }
     .header .container nav ul li a {
         display: block;
