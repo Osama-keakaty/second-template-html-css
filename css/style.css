@@ -748,12 +748,6 @@ ul {
     align-items: center;
 }
 
-.portfolio .more a:active {
-    padding-top: 6px;
-    background-image: linear-gradient(90deg, var(--main-color), var(--transparent-main-color));
-    color: white;
-}
-
 .portfolio .more a {
     padding-top: 6px;
     text-align: center;
@@ -769,6 +763,37 @@ ul {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    position: relative;
+}
+
+.portfolio .more a::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    top: 0;
+    left: 0;
+    height: 35px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    border-radius: 5px;
+    background-image: linear-gradient(90deg, var(--main-color), var(--transparent-main-color));
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.portfolio .more a:hover::after {
+    width: 120px;
+    z-index: -1;
+}
+
+.portfolio .more a:hover {
+    color: white;
+    z-index: 1;
 }
 
 .portfolio .super-awesome {
@@ -813,26 +838,49 @@ ul {
     }
 }
 
-.portfolio .super-awesome .super-awesome-content a {
+.portfolio .super-awesome .super-awesome-content button {
     text-transform: uppercase;
-    text-decoration: none;
     color: white;
     background-color: #0f172a;
-    border: 10px solid #0f172a;
+    width: 120px;
+    height: 35px;
     border-radius: 5px;
-    border-left: 30px solid #0f172a;
-    border-right: 30px solid #0f172a;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    z-index: 10;
+    position: relative;
+    cursor: pointer;
 }
 
-.portfolio .super-awesome .super-awesome-content a:active {
-    color: #0f172a;
+.portfolio .super-awesome .super-awesome-content button::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    width: 0px;
+    border-radius: 5px;
+    height: 35px;
     background-color: white;
-    border-color: white;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.portfolio .super-awesome .super-awesome-content button:hover::after {
+    width: 120px;
+    z-index: -1;
+}
+
+.portfolio .super-awesome .super-awesome-content button:hover {
+    color: #0f172a;
+    z-index: 1;
 }
 
 .portfolio .super-awesome .super-awesome-content .text {
@@ -1353,12 +1401,33 @@ ul {
     text-align: center;
     border: 1px solid var(--main-color);
     cursor: pointer;
+    position: relative;
 }
 
-.pricing .pricing-content .box-price .button:active {
+.pricing .pricing-content .box-price .button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 35px;
     background-image: linear-gradient(90deg, var(--main-color), var(--transparent-main-color));
-    color: white;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.pricing .pricing-content .box-price .button:hover::after {
+    width: 120px;
     box-shadow: 2px 1px 5px 0px #9c9c9c;
+    z-index: -1;
+}
+
+.pricing .pricing-content .box-price .button:hover {
+    color: white;
+    z-index: 1;
 }
 
 @media (max-width:768px) {
@@ -1380,12 +1449,34 @@ ul {
     width: 180px;
     height: 50px;
     text-align: center;
+    position: relative;
     cursor: pointer;
 }
 
-.pricing .text .contact-button button:active {
-    color: white;
+.pricing .text .contact-button button::before {
+    content: "";
+    width: 0;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-image: linear-gradient(90deg, var(--main-color), var(--transparent-main-color));
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.pricing .text .contact-button button:hover {
+    color: white;
+    z-index: 1;
+}
+
+.pricing .text .contact-button button:hover::before {
+    color: white;
+    width: 180px;
+    z-index: -1;
 }
 
 
