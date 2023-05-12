@@ -426,8 +426,7 @@ ul {
     margin-bottom: 40px;
 }
 
-.services .service-content .srv i {
-    color: black;
+.services .service-content .srv .icon {
     flex-basis: 60px;
     margin-right: 10px;
 }
@@ -549,7 +548,7 @@ ul {
 
 .mobile .text ul li {
     display: flex;
-    margin: 10px;
+    margin: 5px;
     gap: 10px;
     cursor: pointer;
 }
